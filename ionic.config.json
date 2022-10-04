@@ -1,0 +1,7 @@
+{
+  "name": "Test_Banabam_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
