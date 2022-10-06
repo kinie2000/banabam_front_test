@@ -1,20 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+    GesChooL
     </ion-title>
+  <ion-button slot="end" (click)="login()">Login</ion-button>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-searchbar type="cc-number" (ionChange)="recherche($event)" debounce="100"></ion-searchbar>
+  <ion-card   *ngFor="let item of mesVoitures">
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>{{item.name_school }}</ion-label>
+      <ion-button fill="outline" slot="end" (click)="edit(item.id)">plus de detail</ion-button>
+    </ion-item>
+    <ion-card-content>
+      <ion-card-subtitle>{{item.school_slogan}}</ion-card-subtitle>
+      <ion-card-title><ion-img src="../assets/images/school-davao-city.jpg"></ion-img></ion-card-title>
+      classé {{item.national_position}} national
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="vide">
+  <ion-card-title>
+    <ion-img src="../assets/images/aucune-valeur-86667616.jpg"></ion-img>
+  </ion-card-title>
+  </ion-card>
 </ion-content>

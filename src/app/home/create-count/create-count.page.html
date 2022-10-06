@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/login" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create Acount</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="saveData()">
+   <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" required formControlName="name"></ion-input>
+   </ion-item>
+    <ion-item lines="full">
+          <ion-label position="floating">Surname</ion-label>
+          <ion-input type="email" required formControlName="prenom"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+           <ion-label position="floating">Email</ion-label>
+           <ion-input type="email" required formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+           <ion-label position="floating">password</ion-label>
+           <ion-input type="text" required formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+           <ion-label position="floating">Mobile</ion-label>
+           <ion-input type="text" required formControlName="tel"></ion-input>
+    </ion-item>
+    <ion-radio-group lines="full"  formControlName="gender">
+          <ion-list-header>
+              <ion-label>Gender</ion-label>
+          </ion-list-header>
+     <ion-item>
+            <ion-label>Male</ion-label>
+               <ion-radio slot="start" value="male" checked></ion-radio>
+             </ion-item>
+      <ion-item>
+              <ion-label>Female</ion-label>
+                 <ion-radio slot="start" value="female"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+   <p *ngIf="errorconect" class="p">Veuillez bien saisir vos champ:le telephone doit etre compris entre 9 à 10 chiffre,l'adresse doit respecter le format @ </p>
+   <p *ngIf="remplirform" class="p">Veuillez remplir le formulaire</p> 
+</ion-content>

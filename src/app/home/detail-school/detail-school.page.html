@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail sur l'etablissement</ion-title>
+    <ion-button slot="end" (click)="logout()">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+<ion-card *ngIf="mesVoitures">
+ <ion-card-header class="ion-text-center">
+   <ion-img src="../assets/images/school-davao-city.jpg"></ion-img>
+    <span>{{mesVoitures.name_school}}</span><br>
+    <ion-card-title color="primary"></ion-card-title>
+  </ion-card-header>
+<ion-card-content>
+    <ion-item>
+      <ion-label>Adresse:</ion-label><br>{{mesVoitures.adresse_school}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Slogan:</ion-label><br>{{mesVoitures.school_slogan}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Fondateur:</ion-label><br>{{mesVoitures.name_founder}}
+    </ion-item>
+    <ion-item>
+        <ion-label>Date de creation:</ion-label><br>{{mesVoitures.date_create}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Position nationale:</ion-label><br>{{mesVoitures.national_position}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Categorie:</ion-label><br>{{mesVoitures.lib_categorie}}
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+</ion-content>

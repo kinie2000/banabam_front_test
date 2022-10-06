@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Test_Banabam_ionic</string>
+    <string name="title_activity_main">Test_Banabam_ionic</string>
+    <string name="package_name">com.example.app</string>
+    <string name="custom_url_scheme">com.example.app</string>
+    <!-- <string name="fb_app_id">635788684573912</string>
+    <string name="fb_app_name">test_banabam</string> -->
+</resources>
